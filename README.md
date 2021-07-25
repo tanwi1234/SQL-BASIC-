@@ -2,73 +2,71 @@
 REVISION NOTES OF SQL
 <h1 align="center">STRUCTURED QUERY LANGUAGE(SQL)</h1>
 Structured Query Language or SQL is a standard Database language which is used to create, maintain and retrieve the data from relational databases like MySQL, Oracle, SQL Server, PostGre, etc.
-•	SQL is used when we have structured data (in the form of tables).Examples like MySQL, Oracle, SQL Server, PostGre, etc.
-•	All databases that are not relational (or do not use fixed structure tables to store data) and therefore do not use SQL, are called NoSQL databases. Examples of NoSQL are MongoDB, DynamoDB, Cassandra, etc.
-•	SQL is case insensitive
-•	Single line comments in SQL using “--” (double hyphen) and multi lines”/* */”at the   beginning of any line
-.
+<ul>
+<li>SQL is used when we have structured data (in the form of tables).Examples like MySQL, Oracle, SQL Server, PostGre, etc.</li>
+<li>All databases that are not relational (or do not use fixed structure tables to store data) and therefore do not use SQL, are called NoSQL databases. Examples of NoSQL are MongoDB, DynamoDB, Cassandra, etc.</li>
+         <li>SQL is case insensitive</li>
+<li>Single line comments in SQL using “--” (double hyphen) and multi lines”/* */”at the   beginning of any line</li>
 
-<h1> Relational Database-</h1>
+</ul>
+<h3> Relational Database-</h3>
 
 Relational database means the data is stored as well as retrieved in the form of relations (tables).
+<ul>
+         <li><b>Attribute<b>: Attributes are the properties that define a relation.</li>
+                  <li><b>Tuple<b>: Each row in the relation is known as tuple. </li>
+                           <li><b>Degree</b>: The number of attributes in the relation is known as degree of  the relation.</li>
+                           <li><b>Cardinality</b>: The number of tuples in a relation is known as cardinality. </li>
+                           <li><b>Column</b>: Column represents the set of values for a particular attribute. </li>
 
-•	Attribute: Attributes are the properties that define a relation.
-•	Tuple: Each row in the relation is known as tuple. 
-•	Degree: The number of attributes in the relation is known as degree of  the     relation.
-•	Cardinality: The number of tuples in a relation is known as cardinality. 
-•	 Column: Column represents the set of values for a particular attribute. 
+</ul>
 
+                           <b>Queries deal with relational databases-</b>
 
-Queries deal with relational databases-
+<ul>
+         <li><b>Data Definition Language</b>: It is used to define the structure of the database. e.g; CREATE TABLE, ADD COLUMN, DROP COLUMN and so on.</li>
 
+         <li><b>Data Manipulation Language</b>: It is used to manipulate data in the relations. e.g.; INSERT, DELETE, UPDATE and so on.</li>
 
-•	Data Definition Language: It is used to define the structure of the database. e.g; CREATE TABLE, ADD COLUMN, DROP COLUMN and so on.
+         <li><b>Data Query Language</b>: It is used to extract the data from the relations</li>
 
-•	Data Manipulation Language: It is used to manipulate data in the relations. e.g.; INSERT, DELETE, UPDATE and so on.
-
-•	Data Query Language: It is used to extract the data from the relations
-
+                           </ul>
 A generic query to retrieve from a relational database is:
 1.	SELECT [DISTINCT] Attribute_List FROM R1,R2….RM
 2.	[WHERE condition]
 3.	[GROUP BY (Attributes)[HAVING condition]]
-         4.[ORDER BY(Attributes)[DESC]];
+4.       [ORDER BY(Attributes)[DESC]];
+5.       ORDER BY AGE is equivalent to ORDER BY AGE ASC. If we want to retrieve the results in descending order of AGE, we can use ORDER BY AGE DESC.
+6.        If we want to retrieve distinct values of an attribute or group of attribute, DISTINCT is used as in
+7.	If we want to retrieve all attributes of students, we can write * in place of writing all attributes
+                           	 
 
+<h3>AGGREGRATION FUNCTIONS</h3>: Aggregation functions are used to perform mathematical operations on data values of a relation.
+                           <ul>
+                                    <li>All aggregation functions return only 1 row.</li>
 
+                                    <li><b>COUNT</b>: Count function is used to count the number of rows in a relation.</li> 
+                                    <li><b>SUM</b>: SUM function is used to add the values of an attribute in a relation.</li> 
 
-
-
-•	ORDER BY AGE is equivalent to ORDER BY AGE ASC. If we want to retrieve the results in descending order of AGE, we can use ORDER BY AGE DESC
-•	If we want to retrieve distinct values of an attribute or group of attribute, DISTINCT is used as in
-•	If we want to retrieve all attributes of students, we can write * in place of writing all attributes 
-
-<h1>AGGREGRATION FUNCTIONS</h1>: Aggregation functions are used to perform mathematical operations on data values of a relation.
-All aggregation functions return only 1 row.
-
-•	COUNT: Count function is used to count the number of rows in a relation. 
-
-•	SUM: SUM function is used to add the values of an attribute in a relation. 
-
-•	AVERAGE: It gives the average values of the tupples.  Syntax:AVG(attributename)
+                                    <li><b>AVERAGE</b>: It gives the average values of the tupples.  Syntax:AVG(attributename)</li>
 OR
 Syntax:SUM(attributename)/COUNT(attributename)
-•	
-MAXIMUM:It extracts the maximum value among the set of tupples.
+                                    <li><b>MAXIMUM</b>:It extracts the maximum value among the set of tupples.</li>
 Syntax:MAX(attributename)
 
-•	MINIMUM:It extracts the minimum value amongst the set of all the tupples.
+                                    <li><b>MINIMUM</b>:It extracts the minimum value amongst the set of all the tupples.</li>
 Syntax:MIN(attributename)
 
-•	GROUP BY: Group by is used to group the tuples of a relation    based    on an attribute or group of attribute. It is always combined with aggregation function which is computed on group
+                                    <li><b>GROUP BY</b>: Group by is used to group the tuples of a relation    based    on an attribute or group of attribute. It is always combined with aggregation function which is computed on group</li>
 
 
-•	An attribute which is not a part of GROUP BY clause can’t be used for selection. Any attribute which is part of GROUP BY CLAUSE can be used for selection but it is not mandatory. But we could use attributes which are not a part of the GROUP BY clause in an aggregrate function.
+<li>An attribute which is not a part of GROUP BY clause can’t be used for selection. Any attribute which is part of GROUP BY CLAUSE can be used for selection but it is not mandatory. But we could use attributes which are not a part of the GROUP BY clause in an aggregrate function.</li>
 
-
-<h1>SQL COMMANDS</h1>
+                           </ul>
+<h3>SQL COMMANDS</h3>
 
  
-DDL (Data Definition Language)
+                           <h3>DDL (Data Definition Language)</h3>
 It is used to define the structure of the database. e.g; CREATE TABLE, ADD COLUMN, DROP COLUMN and so on
 DDL commands:
 CREATE : to create objects in database
@@ -76,7 +74,7 @@ ALTER : alters the structure of database
 DROP : delete objects from database
 RENAME : rename an objects
 
-<h1>DML(Data Manipulation Language)</h1>
+<h3>DML(Data Manipulation Language)</h3>
 It is used to manipulate data in the relations. e.g.; INSERT, DELETE, UPDATE and so on.
 
 SELECT: retrieve data from the database
@@ -84,7 +82,7 @@ INSERT: insert data into a table
 UPDATE: update existing data within a table
 DELETE: deletes all records from a table, space for the records remain
 
-<h1>TCL(Transaction Control Language)</h1>
+<h3>TCL(Transaction Control Language)</h3>
 
 Transaction Control Language commands are used to manage transactions in the database
 TCL commands:
@@ -92,23 +90,23 @@ COMMIT: Commit command is used to permanently save any transaction into the data
 ROLLBACK: This command restores the database to last committed state.It is also used with savepoint command to jump to a savepoint in a transaction.
 SAVEPOINT: Savepoint command is used to temporarily save a transaction so that you can rollback to that point whenever necessary.
 
-<h1>DCL (Data Control Language) :</h1>
+<h3>DCL (Data Control Language) :</h3>
 
 A Data Control Language is a syntax similar to a computer programming language used to control access to data stored in a database (Authorization).
 DCL commands:
 GRANT: allow specified users to perform specified tasks.
 REVOKE: cancel previously granted or denied permissions.
 
-<h1>TRANSACTIONS</h1>
+<h3>TRANSACTIONS</h3>
 Transactions group a set of tasks into a single execution unit. 
 Each transaction begins with a specific task and ends when all the tasks in the group successfully complete. 
-If any of the tasks fail, the transaction fails. Therefore, a transaction has only two results: success or failure. 
-
+If any of the tasks fail, the transaction fails.
+Therefore, a transaction has only two results: success or failure. 
 Incomplete steps result in the failure of the transaction.
  A database transaction, by definition, must be atomic, consistent, isolated and durable. These are popularly known as 
 ACID properties.
 
-<h1>Commands</h1>
+<h3>Commands</h3>
 BEGIN TRANSACTION: BEGIN TRANSACTION transaction_name ;
 SET TRANSACTION: Places a name on a transaction
 COMMIT: If everything is in order with all statements within a single transaction, all changes are recorded together in the database is called committed. 
@@ -128,7 +126,7 @@ ROLLBACK; ( used to undo transactions since the last commit or roolback command 
 •	ROLLBACK TO SAVEPOINT_NAME; (ROLLBACK to any SAVEPOINT at any time to return the appropriate data to its original state. )
 •	RELEASE SAVEPOINT SAVEPOINT_NAME
 
-  <h1> VIEWS</h1>
+  <h3> VIEWS</h3>
 Views in SQL are kind of virtual tables.
  A view also has rows and columns as they are in a real table in the database.
 A View can either have all the rows of a table or specific rows based on certain condition.
@@ -206,14 +204,14 @@ FOREIGN KEY
 CHECK
 DEFAULT
 
-<h1>INDEXES:</h1>
+<h3>INDEXES:</h3>
 An index is a schema object. 
 It is used by the server to speed up the retrieval of rows by using a pointer.
  It can reduce disk I/O(input/output) by using a rapid path access method to locate data quickly. 
 An index helps to speed up select queries and where clauses, but it slows down data input, with the update and the insert statements. 
 Indexes can be created or dropped with no effect on the data. 
 
-<h1>TRIGGER:</h1>
+<h3>TRIGGER:</h3>
 A trigger is a stored procedure in database which automatically invokes whenever a special event in the database occurs. For example, a trigger can be invoked when a row is inserted into a specified table or when certain table columns are being updated.
 
 EXAMPLE:
