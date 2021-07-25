@@ -21,14 +21,14 @@ Relational database means the data is stored as well as retrieved in the form of
 
 </ul>
 
-                           <b>Queries deal with relational databases-</b>
+Queries deal with relational databases-
 
 <ul>
-         <li><b>Data Definition Language</b>: It is used to define the structure of the database. e.g; CREATE TABLE, ADD COLUMN, DROP COLUMN and so on.</li>
+         <li>Data Definition Language: It is used to define the structure of the database. e.g; CREATE TABLE, ADD COLUMN, DROP COLUMN and so on.</li>
 
-         <li><b>Data Manipulation Language</b>: It is used to manipulate data in the relations. e.g.; INSERT, DELETE, UPDATE and so on.</li>
+         <li>Data Manipulation Language: It is used to manipulate data in the relations. e.g.; INSERT, DELETE, UPDATE and so on.</li>
 
-         <li><b>Data Query Language</b>: It is used to extract the data from the relations</li>
+         <li>Data Query Language: It is used to extract the data from the relations</li>
 
                            </ul>
 A generic query to retrieve from a relational database is:
@@ -45,19 +45,19 @@ A generic query to retrieve from a relational database is:
                            <ul>
                                     <li>All aggregation functions return only 1 row.</li>
 
-                                    <li><b>COUNT</b>: Count function is used to count the number of rows in a relation.</li> 
-                                    <li><b>SUM</b>: SUM function is used to add the values of an attribute in a relation.</li> 
+                                    <li>COUNT: Count function is used to count the number of rows in a relation.</li> 
+                                    <li>SUM: SUM function is used to add the values of an attribute in a relation.</li> 
 
-                                    <li><b>AVERAGE</b>: It gives the average values of the tupples.  Syntax:AVG(attributename)</li>
+                                    <li>AVERAGE: It gives the average values of the tupples.  Syntax:AVG(attributename)</li>
 OR
 Syntax:SUM(attributename)/COUNT(attributename)
-                                    <li><b>MAXIMUM</b>:It extracts the maximum value among the set of tupples.</li>
+                                    <li>MAXIMUM:It extracts the maximum value among the set of tupples.</li>
 Syntax:MAX(attributename)
 
-                                    <li><b>MINIMUM</b>:It extracts the minimum value amongst the set of all the tupples.</li>
+                                    <li>MINIMUM:It extracts the minimum value amongst the set of all the tupples.</li>
 Syntax:MIN(attributename)
 
-                                    <li><b>GROUP BY</b>: Group by is used to group the tuples of a relation    based    on an attribute or group of attribute. It is always combined with aggregation function which is computed on group</li>
+                                    <li>GROUP BY: Group by is used to group the tuples of a relation    based    on an attribute or group of attribute. It is always combined with aggregation function which is computed on group</li>
 
 
 <li>An attribute which is not a part of GROUP BY clause can’t be used for selection. Any attribute which is part of GROUP BY CLAUSE can be used for selection but it is not mandatory. But we could use attributes which are not a part of the GROUP BY clause in an aggregrate function.</li>
@@ -69,11 +69,13 @@ Syntax:MIN(attributename)
                            <h3>DDL (Data Definition Language)</h3>
 It is used to define the structure of the database. e.g; CREATE TABLE, ADD COLUMN, DROP COLUMN and so on
 DDL commands:
+                           <ul>
 CREATE : to create objects in database
 ALTER : alters the structure of database
 DROP : delete objects from database
 RENAME : rename an objects
-
+                           </ul>
+                           
 <h3>DML(Data Manipulation Language)</h3>
 It is used to manipulate data in the relations. e.g.; INSERT, DELETE, UPDATE and so on.
 
@@ -182,7 +184,7 @@ DELETING A ROW FROM VIEW:
 DELETE FROM DetailsView
 WHERE NAME="Suresh";
 
-<h1>WITH CHECK OPTION:</h1>
+<h3>WITH CHECK OPTION:</h3>
 •	The WITH CHECK OPTION clause is used to prevent the insertion of rows in the view where the condition in the WHERE clause in CREATE VIEW statement is not satisfied.
 •	If we have used the WITH CHECK OPTION clause in the CREATE VIEW statement, and if the UPDATE or INSERT clause does not satisfy the conditions then they will return an error.
 
@@ -193,7 +195,7 @@ WHERE NAME IS NOT NULL
 WITH CHECK OPTION;
 •	In this View if we now try to insert a new row with null value in the NAME column then it will give an error because the view is created with the condition for NAME column as NOT NULL
 .
-<h1>CONSTRAINTS:</h1>
+<h3>CONSTRAINTS:</h3>
 
 Constraints are the rules that we can apply on the type of data in a table. That is, we can specify the limit on the type of data that can be stored in a particular column in a table using constraint
 Constraints in sql:
