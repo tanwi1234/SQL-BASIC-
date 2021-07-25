@@ -1,6 +1,6 @@
 # SQL-BASIC-
 REVISION NOTES OF SQL
-STRUCTURED QUERY LANGUAGE(SQL)
+<h1 align="center">STRUCTURED QUERY LANGUAGE(SQL)</h1>
 Structured Query Language or SQL is a standard Database language which is used to create, maintain and retrieve the data from relational databases like MySQL, Oracle, SQL Server, PostGre, etc.
 •	SQL is used when we have structured data (in the form of tables).Examples like MySQL, Oracle, SQL Server, PostGre, etc.
 •	All databases that are not relational (or do not use fixed structure tables to store data) and therefore do not use SQL, are called NoSQL databases. Examples of NoSQL are MongoDB, DynamoDB, Cassandra, etc.
@@ -8,7 +8,7 @@ Structured Query Language or SQL is a standard Database language which is used t
 •	Single line comments in SQL using “--” (double hyphen) and multi lines”/* */”at the   beginning of any line
 .
 
- Relational Database-
+<h1> Relational Database-</h1>
 
 Relational database means the data is stored as well as retrieved in the form of relations (tables).
 
@@ -42,7 +42,7 @@ A generic query to retrieve from a relational database is:
 •	If we want to retrieve distinct values of an attribute or group of attribute, DISTINCT is used as in
 •	If we want to retrieve all attributes of students, we can write * in place of writing all attributes 
 
-AGGREGRATION FUNCTIONS: Aggregation functions are used to perform mathematical operations on data values of a relation.
+<h1>AGGREGRATION FUNCTIONS</h1>: Aggregation functions are used to perform mathematical operations on data values of a relation.
 All aggregation functions return only 1 row.
 
 •	COUNT: Count function is used to count the number of rows in a relation. 
@@ -64,7 +64,8 @@ Syntax:MIN(attributename)
 
 •	An attribute which is not a part of GROUP BY clause can’t be used for selection. Any attribute which is part of GROUP BY CLAUSE can be used for selection but it is not mandatory. But we could use attributes which are not a part of the GROUP BY clause in an aggregrate function.
 
-SQL COMMANDS
+
+<h1>SQL COMMANDS</h1>
 
  
 DDL (Data Definition Language)
@@ -75,28 +76,30 @@ ALTER : alters the structure of database
 DROP : delete objects from database
 RENAME : rename an objects
 
-DML(Data Manipulation Language)
+<h1>DML(Data Manipulation Language)</h1>
 It is used to manipulate data in the relations. e.g.; INSERT, DELETE, UPDATE and so on.
 
 SELECT: retrieve data from the database
 INSERT: insert data into a table
 UPDATE: update existing data within a table
 DELETE: deletes all records from a table, space for the records remain
-TCL(Transaction Control Language)
+
+<h1>TCL(Transaction Control Language)</h1>
+
 Transaction Control Language commands are used to manage transactions in the database
 TCL commands:
 COMMIT: Commit command is used to permanently save any transaction into the database.
 ROLLBACK: This command restores the database to last committed state.It is also used with savepoint command to jump to a savepoint in a transaction.
 SAVEPOINT: Savepoint command is used to temporarily save a transaction so that you can rollback to that point whenever necessary.
 
-DCL (Data Control Language) :
+<h1>DCL (Data Control Language) :</h1>
 
 A Data Control Language is a syntax similar to a computer programming language used to control access to data stored in a database (Authorization).
 DCL commands:
 GRANT: allow specified users to perform specified tasks.
 REVOKE: cancel previously granted or denied permissions.
 
-TRANSACTIONS
+<h1>TRANSACTIONS</h1>
 Transactions group a set of tasks into a single execution unit. 
 Each transaction begins with a specific task and ends when all the tasks in the group successfully complete. 
 If any of the tasks fail, the transaction fails. Therefore, a transaction has only two results: success or failure. 
@@ -105,7 +108,7 @@ Incomplete steps result in the failure of the transaction.
  A database transaction, by definition, must be atomic, consistent, isolated and durable. These are popularly known as 
 ACID properties.
 
-Commands
+<h1>Commands</h1>
 BEGIN TRANSACTION: BEGIN TRANSACTION transaction_name ;
 SET TRANSACTION: Places a name on a transaction
 COMMIT: If everything is in order with all statements within a single transaction, all changes are recorded together in the database is called committed. 
@@ -124,7 +127,8 @@ ROLLBACK; ( used to undo transactions since the last commit or roolback command 
 •	SAVEPOINT SAVEPOINT_NAME;
 •	ROLLBACK TO SAVEPOINT_NAME; (ROLLBACK to any SAVEPOINT at any time to return the appropriate data to its original state. )
 •	RELEASE SAVEPOINT SAVEPOINT_NAME
-               VIEWS
+
+  <h1> VIEWS</h1>
 Views in SQL are kind of virtual tables.
  A view also has rows and columns as they are in a real table in the database.
 A View can either have all the rows of a table or specific rows based on certain condition.
@@ -180,7 +184,7 @@ DELETING A ROW FROM VIEW:
 DELETE FROM DetailsView
 WHERE NAME="Suresh";
 
-WITH CHECK OPTION:
+<h1>WITH CHECK OPTION:</h1>
 •	The WITH CHECK OPTION clause is used to prevent the insertion of rows in the view where the condition in the WHERE clause in CREATE VIEW statement is not satisfied.
 •	If we have used the WITH CHECK OPTION clause in the CREATE VIEW statement, and if the UPDATE or INSERT clause does not satisfy the conditions then they will return an error.
 
@@ -191,7 +195,7 @@ WHERE NAME IS NOT NULL
 WITH CHECK OPTION;
 •	In this View if we now try to insert a new row with null value in the NAME column then it will give an error because the view is created with the condition for NAME column as NOT NULL
 .
-CONSTRAINTS:
+<h1>CONSTRAINTS:</h1>
 
 Constraints are the rules that we can apply on the type of data in a table. That is, we can specify the limit on the type of data that can be stored in a particular column in a table using constraint
 Constraints in sql:
@@ -202,14 +206,14 @@ FOREIGN KEY
 CHECK
 DEFAULT
 
-INDEXES:
+<h1>INDEXES:</h1>
 An index is a schema object. 
 It is used by the server to speed up the retrieval of rows by using a pointer.
  It can reduce disk I/O(input/output) by using a rapid path access method to locate data quickly. 
 An index helps to speed up select queries and where clauses, but it slows down data input, with the update and the insert statements. 
 Indexes can be created or dropped with no effect on the data. 
 
-TRIGGER:
+<h1>TRIGGER:</h1>
 A trigger is a stored procedure in database which automatically invokes whenever a special event in the database occurs. For example, a trigger can be invoked when a row is inserted into a specified table or when certain table columns are being updated.
 
 EXAMPLE:
